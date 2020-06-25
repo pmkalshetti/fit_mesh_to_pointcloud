@@ -25,3 +25,6 @@ cmake --build build/
 ```bash
 ./build/fit_sphere path/to/params_gt.json path/to/params_init.json [path/to/log/dir]
 ```
+
+## Result
+![sphere fitting](media_readme/sphere_fitting.gif)

@@ -72,6 +72,7 @@ int FittingFunctor::df(const InputType &x, JacobianType &fjac)
 
             // derivatives wrt parameters
             // int id_param = std::stoi(dir_log.filename());
+            // int id_param = 14;
             for (int id_param{0}; id_param < x.params.size(); ++id_param)
             {
                 // dSdp = dSdV * dVdp

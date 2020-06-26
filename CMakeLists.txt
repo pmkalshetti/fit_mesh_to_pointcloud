@@ -54,3 +54,22 @@ add_executable(
     mesh/mesh.cpp
 )
 target_link_libraries(fit_hand ${Open3D_LIBRARIES} ${OSD_LIBS} ${JSONCPP_LIBRARIES} OpenMP::OpenMP_CXX c++)
+
+add_executable(
+    hand_expt
+    expts/generate_hand_results.cpp
+    hand_fitting/mano.cpp
+    fitting/fitting_functor.cpp
+    subdiv/evaluator.cpp
+    mesh/mesh.cpp
+)
+target_link_libraries(hand_expt ${Open3D_LIBRARIES} ${OSD_LIBS} ${JSONCPP_LIBRARIES} OpenMP::OpenMP_CXX c++)
+
+add_executable(
+    sphere_expt
+    expts/generate_sphere_results.cpp
+    fitting/fitting_functor.cpp
+    subdiv/evaluator.cpp
+    mesh/mesh.cpp
+)
+target_link_libraries(sphere_expt ${Open3D_LIBRARIES} ${OSD_LIBS} ${JSONCPP_LIBRARIES} OpenMP::OpenMP_CXX c++)

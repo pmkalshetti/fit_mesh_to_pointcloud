@@ -9,10 +9,13 @@
 class Visualizer
 {
 public:
-    Visualizer(const std::string &window_name="Open3D", int width=1920, int height=1080)
+    Visualizer(const std::string &window_name="Open3D", int width=1920, int height=1080, bool show_wireframe = false)
     {
         vis.CreateVisualizerWindow(window_name, width, height);
-        vis.GetRenderOption().ToggleMeshShowWireframe();
+        if (show_wireframe)
+        {
+            vis.GetRenderOption().ToggleMeshShowWireframe();
+        }
     }
 
     void add_point_cloud(const std::vector<Eigen::Vector3d> &points, const Eigen::Vector3d &color = {0, 0, 0})
